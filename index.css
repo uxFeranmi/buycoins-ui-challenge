@@ -1,0 +1,17 @@
+/* Some starer styling. Feel free to change anything you like */
+
+body {
+  background-color: rgb(220,220,220);
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+}
+
+button {
+  
+}
+
+.left-arrow {
+  display: inline-block;
+  transform: rotate(180deg);
+}
