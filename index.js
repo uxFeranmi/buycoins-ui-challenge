@@ -33,10 +33,12 @@ const updateTable = async () => {
   let price = document.createElement('td');
   let supply = document.createElement('td');
 
-  coin.textContent = data[i].name;
-  tr.appendChild(coin);
+  for (let coinType of data) {
+    coin.textContent = coinType.name;
+    tr.appendChild(coin);
+    tbody.appendChild(tr);
+  }
      
-  tbody.appendChild(tr);
 };
 
 window.onload = updateTable;
