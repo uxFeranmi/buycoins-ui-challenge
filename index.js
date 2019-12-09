@@ -36,7 +36,7 @@ const nextPage = async () => {
     let supply = document.createElement('td');
 
     name.textContent = coin.name;
-    tr.appendChild(coin);
+    tr.appendChild(name);
 
     code.textContent = coin.symbol;
     tr.appendChild(code);
