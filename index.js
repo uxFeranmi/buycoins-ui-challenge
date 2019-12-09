@@ -20,6 +20,7 @@ const getData = async (start) => {
 };
 
 const updateTable = async () => {
+  console.log('Load!');
   const {data} = await getData(currentPage);
   if (!data)
     return window.alert('Something went wrong. Please try again.');
