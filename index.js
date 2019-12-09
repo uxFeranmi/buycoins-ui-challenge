@@ -39,4 +39,4 @@ const updateTable = async () => {
   tbody.appendChild(tr);
 };
 
-document.onload = updateTable;
+window.onload = updateTable;
