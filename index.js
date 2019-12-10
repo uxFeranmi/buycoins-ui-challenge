@@ -66,11 +66,11 @@ const nextPage = async (previous = false) => {
   }   
 };
 
-window.onload = nextPage;
+window.onload = () => nextPage();
 
 document
   .querySelector('.nav__button.is-next')
-  .onclick = nextPage;
+  .onclick = () => nextPage();
   
 document
   .querySelector('.nav__button.is-previous')
