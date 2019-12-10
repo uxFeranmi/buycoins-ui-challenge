@@ -71,7 +71,14 @@ const nextPage = async (previous = false) => {
   }   
 };
 
-window.onload = () => nextPage();
+window.onload = () => {
+  // Needed to view this on mobile so...
+  const viewportMetaTag = '<meta name="viewport" content="width=device-width, initial-scale=1">';
+  document.head.innerHTML += viewportMetaTag;
+
+  // Load the first page of coin data.
+  nextPage();
+}
 
 document
   .querySelector('.nav__button.is-next')
