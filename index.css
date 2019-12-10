@@ -49,6 +49,9 @@ td, th {
 .nav__button {
   border: none;
   background-color: transparent;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .nav__button:focus {
@@ -60,6 +63,7 @@ td, th {
 }
 
 .left-arrow {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   transform: rotate(180deg);
 }
