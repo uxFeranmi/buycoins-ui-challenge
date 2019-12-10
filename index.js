@@ -32,11 +32,12 @@ let currentPage = -1; // First page is page 0. This should be initialized to -1.
  * @param {boolean} previous Sets whether to get the previous page. Defaults to false.
  */
 const nextPage = async (previous = false) => {
+  // Prevent navigation to less that first page.
+  if (previous && currentPage < 1) 
+    return alert('This is the first page.');
+
   // Calculate next/previous page index.
   let next = previous ? currentPage - 1 : currentPage + 1;
-
-  // Prevent navigation to less that first page.
-  if (next < 0) next = 0;
 
   const {data} = await getData(next);
 
