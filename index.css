@@ -85,8 +85,7 @@ td, th {
   }
 
   /* Label each cell */
-  td:before { 
-    position: absolute; 
+  td:before {
     white-space: nowrap;
     font-weight: bold;
   }
