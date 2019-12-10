@@ -27,15 +27,15 @@ main {
 table {
   border-collapse: collapse;
   border: none;
-  padding: 10px;
 }
 
 tbody tr:nth-child(odd) {
   background-color: rgb(214, 213, 213);
 }
 
-td {
-  padding: 10px 15px 10px 0;
+td, th {
+  padding: 10px 20px 10px 10px;
+  text-align: left;
 }
 
 button {
