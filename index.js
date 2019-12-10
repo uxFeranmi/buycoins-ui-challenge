@@ -5,12 +5,20 @@
  *    Get 10 coins per "page"
  */
 
+/** Fetches the next page of coin data, 10 items per page.
+ * @param {number} start The page number to get.
+ */
 const getData = async (start) => {
   try {
-    const url = `https://api.coinlore.com/api/tickers/?start=${start}&limit=10`;
+    // Start is the page number,
+    // multiply by 10 to get start index for that page. (10 per page).
+    const url = `https://api.coinlore.com/api/tickers/?start=${start*10}&limit=10`;
+
     let data = await fetch(url);
     data = await data.json();
+
     return data;
+    //
   } catch (error) {
     console.error(error);
     return false;
@@ -19,14 +27,20 @@ const getData = async (start) => {
 
 let currentPage = 0;
 
-const nextPage = async () => {
-  console.log('Load!');
-  const {data} = await getData(currentPage);
+/** Renders the next page of coin data.
+ * @param {boolean} previous Sets whether to get the previous page. Defaults to false.
+ */
+const nextPage = async (previous = false) => {
+  let next = previous ? currentPage - 1 : currentPage + 1;
+
+  const {data} = await getData(next);
+
   if (!data)
     return window.alert('Something went wrong. Please try again.');
   
-  currentPage++;
+  currentPage = next;
   const tbody = document.querySelector('tbody');
+  tbody.innerHTML = '';
   
   for (let coin of data) {
     let tr = document.createElement('tr');
@@ -48,8 +62,15 @@ const nextPage = async () => {
     tr.appendChild(supply);
     
     tbody.appendChild(tr);
-  }
-     
+  }   
 };
 
 window.onload = nextPage;
+
+document
+  .querySelector('.nav__button.is-next')
+  .onclick = nextPage;
+  
+document
+  .querySelector('.nav__button.is-previous')
+  .onclick = () => nextPage(true); // Pass true to get previous page.
