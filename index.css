@@ -43,18 +43,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 10px;
 }
 
-nav__button {
+.nav__button {
   border: none;
   background-color: transparent;
 }
 
-nav__button:focus {
+.nav__button:focus {
   outline: 2px solid yellow;
 }
 
-nav__button:active {
+.nav__button:active {
   outline: 3px solid yellowgreen;
 }
 
