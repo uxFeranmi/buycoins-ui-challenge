@@ -10,6 +10,7 @@
  */
 const getData = async (start) => {
   try {
+    console.log(start);
     // Start is the page number,
     // multiply by 10 to get start index for that page. (10 per page).
     const url = `https://api.coinlore.com/api/tickers/?start=${start*10}&limit=10`;

@@ -27,6 +27,7 @@ main {
 table {
   border-collapse: collapse;
   border: none;
+  max-width: 98vw;
 }
 
 tbody tr:nth-child(odd) {
@@ -34,7 +35,7 @@ tbody tr:nth-child(odd) {
 }
 
 td, th {
-  padding: 10px 20px 10px 10px;
+  padding: 10px 25px 10px 10px;
   text-align: left;
 }
 
