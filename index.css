@@ -72,7 +72,7 @@ td, th {
 
 @media screen and (max-width: 550px) {
   body {
-    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   table, thead, tbody, th, td { 
