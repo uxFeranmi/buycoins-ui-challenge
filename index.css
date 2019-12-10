@@ -27,7 +27,8 @@ main {
 table {
   border-collapse: collapse;
   border: none;
-  max-width: 98vw;
+  min-width: 320px;
+  margin: 20px 30px 20px 7px;
 }
 
 tbody tr:nth-child(odd) {
