@@ -68,3 +68,40 @@ td, th {
   align-items: center;
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 550px) {
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+
+  thead /*tr*/ { /* Hide table header */
+    position: absolute;
+    top: 110vh;
+    left: 110vw;
+  }
+
+  td { 
+    
+  }
+
+  /* Label each cell */
+  td:before { 
+    position: absolute; 
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  td:nth-of-type(1):before {
+    content: "💰 Coin";
+  }
+
+  td:nth-of-type(2):before {
+    content: "📄 Code";
+  }
+  td:nth-of-type(3):before {
+    content: "🤑 Price";
+  }
+  td:nth-of-type(4):before {
+    content: "📉 Total Supply";
+  }
+}
