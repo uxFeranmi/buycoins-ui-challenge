@@ -25,6 +25,16 @@ main {
 }
 
 table {
+  border-collapse: collapse;
+  border: none;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(214, 213, 213);
+}
+
+td {
+  padding: 5px 10px 5px 0;
 }
 
 button {
@@ -34,8 +44,4 @@ button {
 .left-arrow {
   display: inline-block;
   transform: rotate(180deg);
-}
-
-tr:nth-child(odd) {
-  background-color: rgb(214, 213, 213);
 }
