@@ -70,8 +70,13 @@ td, th {
 }
 
 @media screen and (max-width: 550px) {
-  table, thead, tbody, th, td, tr { 
+  table, thead, tbody, th, td { 
     display: block; 
+  }
+
+  tr {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   thead /*tr*/ { /* Hide table header */
@@ -81,11 +86,12 @@ td, th {
   }
 
   td { 
-    
+    width: 50%;
   }
 
   /* Label each cell */
   td:before {
+    display: block;
     white-space: nowrap;
     font-weight: bold;
   }
