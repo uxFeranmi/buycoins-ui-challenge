@@ -22,7 +22,7 @@ main {
   border-radius: 5px;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.65);
   background-color: white;
-  min-width: 320px;
+  min-width: 280px;
   margin: 20px 30px 20px 7px;
 }
 
@@ -88,6 +88,7 @@ td, th {
     position: absolute;
     top: 110vh;
     left: 110vw;
+    opacity: 0;
   }
 
   td { 
