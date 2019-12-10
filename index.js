@@ -26,13 +26,17 @@ const getData = async (start) => {
   }
 };
 
-let currentPage = 0;
+let currentPage = -1; // First page is page 0. This should be initialized to -1.
 
 /** Renders the next page of coin data.
  * @param {boolean} previous Sets whether to get the previous page. Defaults to false.
  */
 const nextPage = async (previous = false) => {
+  // Calculate next/previous page index.
   let next = previous ? currentPage - 1 : currentPage + 1;
+
+  // Prevent navigation to less that first page.
+  if (next < 0) next = 0;
 
   const {data} = await getData(next);
 
