@@ -33,8 +33,15 @@ let currentPage = -1; // First page is page 0. This should be initialized to -1.
  */
 const nextPage = async (previous = false) => {
   // Prevent navigation to less that first page.
-  if (previous && currentPage < 1) 
-    return alert('This is the first page.');
+  const previousButton = document
+    .querySelector('.nav__button.is-previous');
+  if (previous && currentPage === 1) {
+    previousButton
+      .classList.add('is-hidden');
+  } else if (currentPage >= 0) {
+    previousButton
+      .classList.remove('is-hidden');
+  }
 
   // Calculate next/previous page index.
   let next = previous ? currentPage - 1 : currentPage + 1;

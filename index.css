@@ -56,6 +56,11 @@ td, th {
   align-items: center;
 }
 
+.nav__button.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .nav__button:focus {
   outline: 2px solid yellow;
 }
