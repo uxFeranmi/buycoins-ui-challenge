@@ -32,7 +32,7 @@ table {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(122, 22, 22);
 }
 
 td, th {
