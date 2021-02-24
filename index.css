@@ -62,7 +62,7 @@ td, th {
 }
 
 .nav__button:focus {
-  outline: 2px solid green;
+  outline: 2px solid yellow;
 }
 
 .nav__button:active {
